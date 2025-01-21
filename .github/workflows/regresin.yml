@@ -39,6 +39,9 @@ jobs:
         with: 
            name: newman-reports
            path: ./newman/*
+      
+      - name: Publish Test Summary Results
+        run: npx github-actions-ctrf ctrf/ctrf-report.json
 
 
 
