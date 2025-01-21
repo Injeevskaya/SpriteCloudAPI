@@ -29,8 +29,8 @@ jobs:
 
       - name: Install Newman and CTRF reporter
         run: |
-          "npm install -g newman
-          npm install newman-reporter-ctrf-json"
+          npm install -g newman
+          npm install newman-reporter-ctrf-json
       
       - name: Run Newman with CTRF reporter
         run: newman run 'Reqres.in API testing.postman_collection.json' -r cli,ctrf-json
