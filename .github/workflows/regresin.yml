@@ -15,3 +15,30 @@ on:
 jobs: 
   test-api:
     runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Checkout Repository
+        uses: action/checkout@v4
+
+
+      - name: Install Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install Newman and htmlextra
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
+      
+      - name: Run Newman with HTML Extra Reporter
+        run: newman run 'Reqres.in API testing.postman_collection.json' -r htmlextra --reporter-htmlextra-export './newman/report.html'
+
+      - uses: actions/upload-artifact@v2
+        with: 
+           name: newman-reports
+           path: ./newman/*
+
+
+
