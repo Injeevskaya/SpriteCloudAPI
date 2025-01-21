@@ -35,7 +35,7 @@ jobs:
       - name: Run Newman with HTML Extra Reporter
         run: newman run 'Reqres.in API testing.postman_collection.json' -r htmlextra --reporter-htmlextra-export './newman/report.html'
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with: 
            name: newman-reports
            path: ./newman/*
