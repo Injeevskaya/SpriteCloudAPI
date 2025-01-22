@@ -93,7 +93,7 @@ pm.test("Response contains expected error message", function () {
 
 ### Run All Tests
 
-To execute tests use run collection action:
+To execute tests use `run collection` action:
 ```
 To use the Collection Runner, click on the "Runner" button in the top right corner 
 of the Postman window. 
