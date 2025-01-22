@@ -95,7 +95,9 @@ pm.test("Response contains expected error message", function () {
 
 To execute tests use run collection action:
 ```
-To use the Collection Runner, click on the "Runner" button in the top right corner of the Postman window. 
+To use the Collection Runner, click on the "Runner" button in the top right corner 
+of the Postman window. 
+
 Select the collection you want to run, and click the "Start Run" button.
 ```
 
