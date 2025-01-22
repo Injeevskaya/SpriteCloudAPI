@@ -37,11 +37,11 @@ Please find the instraction [here](https://learning.postman.com/docs/getting-sta
 1. Response Code
     It's provided by this verification
 
-    ```
+```
     pm.test("Status code is 400", function () {
     pm.response.to.have.status(400);
 });
-    ```
+```
 
 2. Response Time
 
@@ -49,8 +49,10 @@ Please find the instraction [here](https://learning.postman.com/docs/getting-sta
 
 But as there was not information provided about the response time 
 (In case of working I'd ask my BE teammates), this verification was not included to the assertions but it is possible to use next code to test it: 
+
 - limit value has to be provided.
-    ```
+
+```
 pm.test("Response time is less than limit", function() {
 var limit = 10;
 
@@ -61,11 +63,11 @@ if (pm.response.responseTime < limit) {
     console.log("Response time was longer than " + limit + " ms.");
 }
 });
-    ```
+```
 
 3. Response Format
    
-    ```
+```
 pm.test("Response has expected structure", function () {
     var jsonData = pm.response.json();
     pm.expect(jsonData).to.have.property('name');
@@ -73,17 +75,17 @@ pm.test("Response has expected structure", function () {
     pm.expect(jsonData).to.have.property('id');
     pm.expect(jsonData).to.have.property('createdAt');
 });
-    ```
+```
 
-1. Error Handling
+4. Error Handling
 
-    ```
+```
 pm.test("Response contains expected error message", function () {
     var jsonData = pm.response.json();
     pm.expect(jsonData).to.have.property('error');
     pm.expect(jsonData.error).to.eql('Missing password');
 });
-    ```
+```
 ---
 
 
