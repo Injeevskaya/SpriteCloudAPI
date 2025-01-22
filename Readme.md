@@ -9,12 +9,11 @@ This project is a test automation solution for the Sprite Cloud assignment, focu
 - **Tool**: Postman  
 - **Language**: Javascript 
 
-TOdo
+---
 
 ## What is API testing
 
 API testing is a type of software testing that involves testing APIs directly and also as a part of integration testing to check whether the API meets expectations in terms of functionality, reliability, performance, and security of an application. In API Testing our main focus will be on a Business logic layer of the software architecture. API testing can be performed on any software system which contains multiple APIs. API testing won’t concentrate on the look and feel of the application. API testing is entirely different from GUI Testing.
-
 
 ## What is Postman?
 
@@ -23,6 +22,8 @@ Postman is a popular tool for API testing that allows developers to create and e
 ## How to install Postman
 
 Please find the instraction [here](https://learning.postman.com/docs/getting-started/installation/installation-and-updates/)
+
+---
 
 ## Test Cases were written for the next Endpoints:
 
@@ -87,7 +88,6 @@ pm.test("Response contains expected error message", function () {
 });
 ```
 ---
-
 
 ## Running the Tests
 
