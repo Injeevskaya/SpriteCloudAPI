@@ -7,40 +7,65 @@ This project is a test automation solution for the Sprite Cloud assignment, focu
 ## Requirements
 
 ### Test Cases
-- Write **3 UI web tests**.
+- Write **3 API web tests**.
 
 ### Rules
-- Tests are executed on: [SauceDemo](https://www.saucedemo.com).
+- Tests are executed on: [Regres.in](https://reqres.in).
 
 ### Deliverables
 - A clear `README.md` file for the automation solution.
 
 ### Technology Stack
-- **Tool**: Playwright  
-- **Language**: Typescript  
-  > Restriction: No "Record and Play" tools allowed.
-
+- **Tool**: [Your choice] OR [Playwright] Restriction: No “Record and Play” tools  
+- **Language**: (pick one) [C#] [Typescript] [ Javascript] [Java] [Python]
 ---
 
 ## Solution Overview
 
-- **Tool**: Playwright  
-- **Language**: Typescript  
+- **Tool**: Postman  
+- **Language**: Javascript 
 
 This solution provides a framework for UI test automation, including:
 - Automated **positive and negative tests** for the login page.
 - A **Page Object Model (POM) structure** created specifically for the login page.
 - Test coverage implemented using Playwright.
 
-> **Note:** During testing, it was observed that one of the accessible values in the tuple used for positive test cases did not work as expected. This issue has been documented and requires further investigation.
+## What is API testing
 
-![Tests Report](image.png)
+
+
+## What is Postman?
+
+Postman is a popular tool for API testing that allows developers to create and execute HTTP requests and test API responses. Postman makes API testing more efficient and effective with features such as request builders, response visualizations, and test automation.
+
+## How to install Postman
+
+Please find the instraction [here](https://learning.postman.com/docs/getting-started/installation/installation-and-updates/)
+
+**Note:** 
+
+Usually API testing includes next points:
+
+
+But as there was not requirements about the response time, this verification was not included to the assertions but it is possible to use next code to test it: 
+- limit value has to be provided.
+
+pm.test("Response time is less than limit", function() {
+var limit = 10;
+
+if (pm.response.responseTime < limit) {      
+    pm.expect(pm.response.responseTime).to.be.below(limit);  
+    console.log("Response Time: " + pm.response.responseTime + " ms" + " / Response Date: " + pm.response.headers.get("Date"));
+} else {
+    console.log("Response time was longer than " + limit + " ms.");
+}
+});
 ---
 
 
 ## Installation and Setup
 
-### 1. Installing Playwright
+### 1. Installing Postman
 Run the following command to initialize Playwright:  
 
 ```bash
@@ -62,16 +87,10 @@ npx playwright test
 
 ## Test Reporting
 
-### HTML Test Reports
-1. Test report are located in the `playwright-report` directory of the project. (In case of local setup)
-To view the HTML report, run in CLI:  
+### Test Reports
 
-   ```bash
-   npx playwright show-report
-   ```
-2. GitHub Actions report:
+1. GitHub Actions report:
 - ctrf report is attached as the **test summary** 
-- html report is attached as the **Artifacts** 
 
 ### GitHub Actions Workflow
 - Test execution results can also be found in the GitHub Actions workflow page:  
