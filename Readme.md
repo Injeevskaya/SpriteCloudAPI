@@ -1,6 +1,6 @@
-# Task 2 - Test Automation: UI Tests for Sprite Cloud Assignment
+# Task 2 - Test Automation: API Tests for Sprite Cloud Assignment
 
-This project is a test automation solution for the Sprite Cloud assignment, focused on UI tests using [Playwright](https://playwright.dev).
+This project is a test automation solution for the Sprite Cloud assignment, focused on API tests using [Postman](https://learning.postman.com/docs/introduction/overview/).
 
 ---
 
@@ -35,7 +35,7 @@ Please find the instraction [here](https://learning.postman.com/docs/getting-sta
 
 ## What was validated:
 
-1. Response Code
+1. ***Response Code**
     It's provided by this verification
 
 ```
@@ -44,7 +44,7 @@ Please find the instraction [here](https://learning.postman.com/docs/getting-sta
 });
 ```
 
-2. Response Time
+2. ***Response Time**
 
 **Note:** 
 
@@ -66,7 +66,7 @@ if (pm.response.responseTime < limit) {
 });
 ```
 
-3. Response Format
+3. ***Response Format**
    
 ```
 pm.test("Response has expected structure", function () {
@@ -78,7 +78,7 @@ pm.test("Response has expected structure", function () {
 });
 ```
 
-4. Error Handling
+4. ***Error Handling**
 
 ```
 pm.test("Response contains expected error message", function () {
@@ -93,7 +93,11 @@ pm.test("Response contains expected error message", function () {
 
 ### Run All Tests
 
-To execute tests use run collection action  
+To execute tests use run collection action:
+```
+To use the Collection Runner, click on the "Runner" button in the top right corner of the Postman window. Select the collection you want to run, and click the "Start Run" button.
+```
+ (see more info here)[https://apidog.com/blog/how-to-use-postman-for-api-testing/] 
 
 ---
 
